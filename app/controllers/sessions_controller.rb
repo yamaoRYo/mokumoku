@@ -17,4 +17,10 @@ class SessionsController < ApplicationController
     logout
     redirect_to login_path
   end
+
+  def dummy_twitter
+    # ダミーのTwitter認証処理を記述
+    flash[:notice] = "ダミーのTwitter認証に成功しました"
+    redirect_to root_path
+  end  
 end

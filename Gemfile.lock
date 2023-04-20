@@ -148,6 +148,7 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashie (5.0.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jb (0.8.0)
@@ -194,6 +195,16 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
+    omniauth (2.1.1)
+      hashie (>= 3.4.6)
+      rack (>= 2.2.3)
+      rack-protection
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     parallel (1.21.0)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -205,6 +216,8 @@ GEM
     rack (2.2.3)
     rack-mini-profiler (2.3.3)
       rack (>= 1.2.0)
+    rack-protection (3.0.6)
+      rack
     rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
@@ -348,6 +361,8 @@ DEPENDENCIES
   kaminari!
   letter_opener_web
   listen (~> 3.3)
+  omniauth
+  omniauth-twitter
   pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
