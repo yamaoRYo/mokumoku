@@ -5,13 +5,10 @@ Rails.application.routes.draw do
   get 'events/index'
   root 'events#index'
   get 'login', to: 'sessions#new'
-  get '/auth/dummy_twitter', to: 'sessions#dummy_twitter', as: :dummy_twitter_auth
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
-  get '/auth/twitter/callback', to: 'sessions#callback'
-  get '/auth/failure', to: 'sessions#failure'
   resources :users, only: %i[new create]
   resources :events do
     collection do

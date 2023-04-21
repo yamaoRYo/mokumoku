@@ -23,7 +23,7 @@
                     <% end %>
                   </span>
                 <% end %>
-                <span id="js-event-bookmark-<%= @event.id %>
+                <span id="js-event-bookmark-<%= @event.id %>">
                   <% if current_user.bookmarked?(@event) %>
                     <%= render 'events/bookmarks/unbookmark', event: @event %>
                   <% else %>
@@ -134,11 +134,6 @@
             <%= f.submit class: 'btn btn-primary btn-sm' %>
           <% end %>
         </div>
-      </div>
-      <div class="mt-3">
-      <%= link_to "https://twitter.com/intent/tweet?url=#{event_url(@event)}&text=#{ERB::Util.url_encode("参加予定のもくもく会: #{@event.title}")}&hashtags=#{ERB::Util.url_encode('もくもく会')}", target: '_blank', class: 'share-btn btn btn-primary' do %>
-        <i class="bi bi-twitter"></i> twitter でもくもく会をシェアしよう
-      <% end %>
       </div>
     </div>
   </div>

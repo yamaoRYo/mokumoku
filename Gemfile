@@ -39,11 +39,6 @@ gem 'faker'
 
 gem 'enum_help'
 
-# SNS認証
-gem 'omniauth'
-# twitter認証用
-gem 'omniauth-twitter'
-
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
