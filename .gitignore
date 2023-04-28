@@ -42,4 +42,4 @@ yarn-debug.log*
 /config/credentials/production.key
 
 # File grouping for ignored files
-/vedor/bundle/
+/vedor/bundle
