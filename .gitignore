@@ -40,3 +40,6 @@ yarn-debug.log*
 .yarn-integrity
 
 /config/credentials/production.key
+
+# File grouping for ignored files
+/vedor/bundle
