@@ -25,3 +25,21 @@ $ bin/rails s
 3. 認証用のルーティングを設定する
 4. セッションコントローラにツイッターの認証アクションを追加
 5. シェアしたいページにツイッターのシェアボタンを実装
+
+## 実装方針
+
+ログイン後、HobbyとProfileを登録できる
+他のユーザーのHobbyとProfileを閲覧できる。
+他のユーザーをフォローできるし、フォロー解除することもできる。
+【注意点】
+
+usersテーブルに"profile"・"hobby"カラムを追加する。
+フォロー・アンフォローするボタンは"フォローする"・"フォローを外す"とする。
+【Gemfile】
+Testグループに以下のgemを追加
+
+gem 'capybara', '~> 3.23'
+gem 'selenium-webdriver'
+gem 'webdrivers'
+Gemfileの最下部に以下のgemを追加
+gem 'nokogiri', '1.12.5'
