@@ -1,0 +1,1 @@
+document.querySelector("#js-user-relationship-<%= @user.id %>").innerHTML = "<%= j(render 'relationships/follow', user: @user) %>";
